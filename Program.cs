@@ -1,4 +1,5 @@
 ﻿using System;
+using NETCORE.Entidades;
 
 namespace NETCORE
 {
@@ -6,7 +7,10 @@ namespace NETCORE
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var escuela = new Escuela("DigAcademy", 2000);
+            escuela.Pais = "Venezuela";
+            escuela.Ciudad = "Punto Fijo";
+            Console.WriteLine(escuela.Nombre);
         }
     }
 }
