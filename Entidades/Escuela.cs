@@ -1,23 +1,30 @@
 namespace NETCORE.Entidades
 {
-    class Escuela{
+    class School{
 
-        string nombre;
-        public string Nombre
+        string nameSchool;
+        public string Name
         {
-            get { return "Copia: " + nombre; }
-            set { nombre = value.ToUpper(); }
+            get { return "Copy: " + nameSchool; }
+            set { nameSchool = value.ToUpper(); }
         }
 
-        public int AñoDeCreacion { get; set; }
+        public int BornYear { get; set; }
 
-        public string Pais { get; set; }
+        public string Country { get; set; }
 
-        public string Ciudad { get; set; }
+        public string City { get; set; }
 
         private int myVar;
 
-        public Escuela(string nombre, int año) => (this.nombre, AñoDeCreacion) = (nombre, año);
+        public SchoolType SchoolType{ get; set; }
+
+        public School(string name, int year) => (this.nameSchool, BornYear) = (name, year);
+
+        public override string ToString()
+        {
+            return $"Name: {Name}, Type: {SchoolType} \nCountry: {Country}; City: {City}";
+        }
 
     }
 

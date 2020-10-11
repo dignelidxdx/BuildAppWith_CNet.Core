@@ -7,10 +7,10 @@ namespace NETCORE
     {
         static void Main(string[] args)
         {
-            var escuela = new Escuela("DigAcademy", 2000);
-            escuela.Pais = "Venezuela";
-            escuela.Ciudad = "Punto Fijo";
-            Console.WriteLine(escuela.Nombre);
+            var school = new School("DigAcademy", 2000);
+            school.Country = "Venezuela";
+            school.City = "Punto Fijo";
+            Console.WriteLine(school);
         }
     }
 }
